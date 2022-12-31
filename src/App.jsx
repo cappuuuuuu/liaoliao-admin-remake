@@ -1,5 +1,5 @@
-import { GlobalStyle } from './style/global'
-import { ResetStyle } from './style/reset'
+import { GlobalStyle } from '@/style/global'
+import { ResetStyle } from '@/style/reset'
 
 function App () {
   return (

@@ -24,7 +24,7 @@ function LoginForm () {
         </AccountInputWrapper>
         <InputWrapper>
           <InputIcon src={PasswordIcon}/>
-          <Input type="password" placeholder='Password' name='password' autocomplete="on"/>
+          <Input type="password" placeholder='Password' name='password' autoComplete="on"/>
         </InputWrapper>
       </InputContainer>
       <SignInButton>Sign In</SignInButton>

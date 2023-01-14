@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true
@@ -6,20 +7,25 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'standard',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
+    'plugin:@typescript-eslint/recommended'
   ],
   overrides: [
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    jsx: true,
+    useJSXTextNode: true
   },
   plugins: [
     'react',
-    'react-hooks'
+    'react-hooks',
+    '@typescript-eslint'
   ],
   rules: {
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn' // Checks effect dependencies
-  }
+  },
+  parser: '@typescript-eslint/parser'
 }

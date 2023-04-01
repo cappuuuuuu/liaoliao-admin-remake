@@ -10,7 +10,7 @@ import {
 } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Loading from '@/components/ApiStatus/Loading'
-import ErrorAlert from '@/components/ApiStatus/ErrorAlert'
+import ResponseAlert from '@/components/ApiStatus/ResponseAlert'
 
 const queryClient = new QueryClient()
 
@@ -24,7 +24,7 @@ function App () {
           <GlobalStyle/>
           <RouterProvider router={router} />
           <Loading/>
-          <ErrorAlert/>
+          <ResponseAlert/>
         </ThemeProvider>
       </QueryClientProvider>
     </div>

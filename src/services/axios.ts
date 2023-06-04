@@ -21,6 +21,8 @@ apiClient.interceptors.response.use(
   (response) => {
     const successMessage = response.data.message
     setIsLoading(false)
+
+    // show the ReponseAlert component if need.
     if (successMessage) {
       setMessage({
         type: 'success',
@@ -31,6 +33,7 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     setIsLoading(false)
+    // when response error, everytime show the ReponseAlert compononent.
     setMessage({
       type: 'error',
       content: error.response.data.message

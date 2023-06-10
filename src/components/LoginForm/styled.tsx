@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Field } from 'formik'
 
 export const FormWrap = styled.div`
   display: flex;
@@ -48,8 +49,8 @@ export const InputWrapper = styled.div`
   }
 `
 
-export const AccountInputWrapper = styled(InputWrapper)`
-  margin-bottom: 22px;
+export const PasswordInputWrapper = styled(InputWrapper)`
+  margin-top: 22px;
 `
 
 export const InputIcon = styled.img`
@@ -57,7 +58,7 @@ export const InputIcon = styled.img`
   margin-right: 16px;
 `
 
-export const Input = styled.input.attrs(props => ({
+export const Input = styled(Field).attrs(props => ({
   type: props.type || 'text'
 }))`
   width: 100%;
@@ -78,7 +79,10 @@ export const Input = styled.input.attrs(props => ({
   }
 `
 
-export const SignInButton = styled.div`
+export const SignInButton = styled.button.attrs({
+  type: 'submit'
+})`
+  width: 100%;
   color: white;
   height: 46px;
   display: flex;

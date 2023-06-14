@@ -21,8 +21,8 @@ export const FormWrap = styled.div`
 
 export const GreetingMsg = styled.div`
   margin-bottom: 16px;
-  font-weight: bold;
   font-size: 66px;
+  color: ${props => props.theme.colors.primary};
 `
 
 export const HintMsg = styled.div`

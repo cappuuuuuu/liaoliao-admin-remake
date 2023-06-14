@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  // Add something GlobalStyle Here :D
+  body {
+    font-family: DMSans, sans-serif;
+  }
 `

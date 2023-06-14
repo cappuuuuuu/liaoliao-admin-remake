@@ -1,14 +1,12 @@
 import { ThemeProvider } from 'styled-components'
 import { RouterProvider } from 'react-router-dom'
-import router from '@/routes'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { GlobalStyle } from '@/style/global'
 import { ResetStyle } from '@/style/reset'
+import { FontStyle } from '@/style/font'
+import router from '@/routes'
 import theme from '@/style/theme'
-import {
-  QueryClient,
-  QueryClientProvider
-} from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Loading from '@/components/ApiStatus/Loading'
 import ResponseAlert from '@/components/ApiStatus/ResponseAlert'
 
@@ -23,6 +21,7 @@ function App () {
           <ResetStyle/>
           <GlobalStyle/>
           <RouterProvider router={router} />
+          <FontStyle/>
           <Loading/>
           <ResponseAlert/>
         </ThemeProvider>
